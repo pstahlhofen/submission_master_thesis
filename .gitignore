@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.npy
+__pycache__
+.DS_Store
+First_Example
+LeakDB
+Net1_CMH.tar
+Net1_CMH
+WNTR

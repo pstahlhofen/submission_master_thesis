@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
+\begin{document}
+Given
+\begin{itemize}
+\item A water distribution network $W := (V,E)$ where $V$ is a set of nodes (junctions, tanks, reservoirs) and $E \subseteq V \times V$ is a set of edges (pipes, pumps, valves) connecting the nodes. 
+\item A leak $L := (s,l)$ with a size $s \in \mathbb{R}^+$ and a location $l \in V$
+\item A number of timesteps $T \in \mathbb{N}$
+\item A number of sensors $N \leq \abs{V} \in \mathbb{N}$
+\item A number of measured properties per sensor $C \in \mathbb{N}$
+\item A set of sensors $\Sigma := \{ \sigma_1(L), \hdots, \sigma_N(L) \}$ where each sensor is a function depending on the leak size and location and yielding real-valued measurements:
+\[\sigma_n : \mathbb{R} \times V \mapsto \mathbb{R}^{C \times T} \qquad \forall n \in {1, \hdots, N}\]
+\item A hacked sensor $\sigma_h \in \Sigma$
+\item A set of predictions from a leakage detection model $\Pi := \{ \pi_1, \hdots, \pi_N \}$ with $\pi_n \in \mathbb{R}^{C \times T}\ \forall n \in \{ 1, \hdots, N \}$
+\item A set of thresholds $\{ \tau_1, \hdots, \tau_N \}$ with $\tau_n \in \mathbb{R}^+\ \forall n \in \{ 1, \hdots, N \}$
+\item A metric function to measure divergence between sensor measurements and model predictions
+\[ d_{div} : \mathbb{R}^{C \times T} \times \mathbb{R}^{C \times T} \mapsto \mathbb{R}^+\]
+\item A sensor placement function
+\[p_s : \Sigma \mapsto V\]
+\item A metric function on the network
+\[d_{net} := V \times V \mapsto \mathbb{R}^+\]
+\end{itemize}
+Then the leakage radius of the hacked sensor can be defined as
+\begin{equation}
+	\max_l\ d_{net}(l, p_s(\sigma_h)) \quad \text{s.t.} \quad d_{div}(\sigma_n(l, s), \pi_n) \leq \tau_n \ \forall n \in \{ 1, \hdots, N \}
+\end{equation}
+for a fixed leak size s
+\end{document}

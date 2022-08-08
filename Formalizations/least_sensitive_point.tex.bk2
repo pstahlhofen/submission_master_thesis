@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\makeatletter
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+
+\begin{document}
+Given
+\begin{itemize}
+\item a water distribution network $W = (V,E)$ with
+\begin{itemize}
+\item a set of $N$ nodes (junctions, tanks, reservoirs) $V = \{ v_n | n \in \{ 1, \hdots, N \} \}$
+\item a set of edges (pipes, valves, pumps) connecting the nodes: $E \subseteq V \times V$
+\end{itemize}
+\item pressure values for each node $v_n$ given as realizations $x_n$ of random variables $X_n\ \forall n \in \{ 1, \hdots, N \}$ with underlying joint probability density function $P(X)$
+\item a prediction function $f_{pred} : \mathbb{R}^{N} \mapsto \{ 0, 1 \}$ taking a vector of pressure values $\bm{x} = (x_1, \hdots, x_N)^T$ as input and indicating whether the network is under attack (1) or not (0)
+\end{itemize}
+Then the least sensitive point $v_n$ is the node for which
+\begin{align}
+n &= \argmin_{n} E_{P(X_{-n}|X_n)} [f_{pred}(\bm{x})]\\
+  &= \argmin_{n} \int P(\bm{x}_{-n}|X_n = x_n) f_{pred}(\bm{x}) \diff^{N-1}x
+\end{align}
+where $X_{-n} := \{ X_i | i \in \{ 1, \hdots, N\},\ i \neq n \}$ and $\bm{x}_{-n}$ is a vector containing realizations of $X_{-n}$.
+\end{document}

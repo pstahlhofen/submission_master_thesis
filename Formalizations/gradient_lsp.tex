@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\makeatletter
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\DeclareMathOperator{\lsp}{lsp}
+
+\newcommand{\R}[1]{\mathcal{#1}} % random variable
+\newcommand{\M}[1]{\mathbf{#1}} % matrix
+\newcommand{\V}[1]{\bm{#1}} % vector
+
+\begin{document}
+\section*{Formalization: Least sensitive point}
+Given
+\begin{itemize}
+\item a water distribution network $W = (V,E)$ with
+\begin{itemize}
+\item a set of $N$ nodes (junctions, tanks, reservoirs) $V = \{ v_n | n \in \{ 1, \hdots, N \} \}$
+\item a set of edges (pipes, valves, pumps) connecting the nodes: $E \subseteq V \times V$
+\end{itemize}
+\item demand values $\M{X} \in \mathbb{R}^{N \times T}$ where $x_{n,t}$ is the demand for $v_n$ at time $t$
+\item a prediction function $f_{pred} : \mathbb{R}^{N} \times \mathbb{N} \to \{ 0, 1 \}$ taking a vector of demand values $\V{x}_t := (x_{1,t}, \hdots, x_{n,t})$ and a time $t \in \{ 1, \hdots, T\}$ to indicate whether the network is ok (0) or under attack (1)
+\item a time window $\{ t + k | k \in \{ 0, \hdots, K \} \}$ with fixed size $K \in \mathbb{N}_0$
+\end{itemize}
+We are trying to introduce a maximal unnoticed change to the demand at one of the nodes.
+\begin{align}
+& \max_{\substack{n \in \{ 1, \hdots, N \} \\ t \in \{ 1, \hdots, T - K \} \\ \delta \in \mathbb{R}}} \norm{\delta}\\
+	& \text{s.t.} \quad f_{pred} (\V{x}_{t+k} + \delta \V{e}_n, t+k) = 0 \quad \forall k \in \{ 0, \hdots, K \}
+\end{align}
+Where $\V{e}_n$ is the $n$-the canonical basis vector of the $\mathbb{R}^N$.
+
+The \textbf{least sensitive point} is the node in the network, which solves the maximal unnoticed change problem, that is
+\begin{equation}
+\lsp (W) = v_{n^*}
+\end{equation}
+where
+\begin{align}
+& n^*:= \argmax_{n \in \{ 1, \hdots, N \} } \max_{\substack{t \in \{ 1, \hdots, T \} \\ \delta \in \mathbb{R}}} \norm{\delta}\\
+& \text{s.t.} \quad f_{pred} (\V{x}_t + \delta \V{e}_n, t) = 0
+\end{align}
+
+\section*{Ideas for an approximation}
+For fixed $\V{x}_t$ and $t$, one can try to approximate $n^*$ by means of the absolute value of the gradient of $f_{pred}$ with respect to the nodal demand.
+\begin{equation}
+\abs{\frac{\partial f_{pred}(\V{x}_t, t)}{\partial x_{n,t}}}
+\end{equation}
+This method would require differentiability of $f_{pred}$. Also, a good initial guess for $t$ or alternatively a gradient computation for several interesting timesteps is needed. The demand $\V{x}_t$ must be known or approximated. In order to achieve a good approximation for $n^*$, gradients of $f_{pred}$ should be smooth, i.e. a small gradient at $\V{x}_t$ should imply a small gradient at $\V{x}_t + \epsilon$.
+\subsection*{Sensors}
+Usually, a few of the nodes will be equipped with pressure sensors. Given $S \leq N$ sensors in the network, the predictive function can be expressed as a composition
+\begin{equation}
+f_{pred} = f_{model} \circ f_{measure}
+\end{equation}
+where
+\begin{itemize}
+\item $f_{measure} : \mathbb{R}^N \to \mathbb{R}^S$ maps the demands $\V{x}_t$ for some fixed time $t$ to pressure measurements $\V{y}_t \in \mathbb{R}^{S}$
+\item $f_{model} : \mathbb{R}^S \times \mathbb{N} \to \{ 0,1 \}$ uses the measured presuure values $\V{y}_t$ and the timestep $t$ to predict whether the network is under attack
+\end{itemize}
+Using this composition, the derivative above can be re-written as
+\begin{equation}
+\frac{\partial f_{pred} (\V{x}_t)}{\partial p_{n,t}} = \frac{\partial f_{model} (\V{y}_t, t)}{\partial f_{measure} (\V{x}_t)} \frac{\partial f_{measure} (\V{x}_t)}{\partial x_{n,t}}
+\end{equation}
+For the gradient of $f_{measure}$ one could use hydraulic simulation.
+\end{document}

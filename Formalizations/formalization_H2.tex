@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
+\begin{document}
+Given
+\begin{itemize}
+\item A water distribution network $W := (V,E)$ where $V$ is a set of nodes (junctions, tanks, reservoirs) and $E \subseteq V \times V$ is a set of edges (pipes, pumps, valves) connecting the nodes. 
+\item A number of sensors $N \leq \abs{V} \in \mathbb{N}$
+\item A number of measured properties per sensor $C \in \mathbb{N}$
+\item A set of sensors $\Sigma := \{ \sigma_1, \hdots, \sigma_N \}$ with $\sigma_n \in \mathbb{R}^{C} \ \forall n \in {1, \hdots, N}$
+\item A set of predictions from a leakage detection model $\Pi := \{ \pi_1, \hdots, \pi_N \}$ with $\pi_n \in \mathbb{R}^{C}\ \forall n \in \{ 1, \hdots, N \}$
+\item A set of thresholds $\{ \tau_1, \hdots, \tau_N \}$ with $\tau_n \in \mathbb{R}^+\ \forall n \in \{ 1, \hdots, N \}$
+\item A metric function to measure divergence between sensor measurements and model predictions
+\[ d_{div} : \mathbb{R}^{C \times T} \times \mathbb{R}^{C \times T} \mapsto \mathbb{R}^+\]
+The model is classified as under attack \textbf{iff}
+\[\abs{ \{ n \in \{ 1, \hdots, n \} | d_{div}(\sigma_n, \pi_n) > \tau_n \}} > n_{alarm}\]
+for some hyperparameter $n_{alarm}$
+\end{itemize}
+Let $v_s \in V$ be a node at which one wants the network to be more sensitive to potential attacks. Then one could...
+\begin{enumerate}
+\item introduce a virtual sensor at that node. The simulated measurements of that sensor are constructed using some function depending on the other sensors:
+	\[ \sigma_{n+1} = f_{\sigma}(\sigma_1, \hdots, \sigma_n)\]
+\item Make a prediction for that node, that is based on the other predictions of the model
+\[ \pi_{n+1} = f_{\pi}(\pi_1, \hdots, \pi_n)\]
+\item define a reasonable threshold $\tau_{n+1}$ for that sensor.
+\end{enumerate}
+\end{document}

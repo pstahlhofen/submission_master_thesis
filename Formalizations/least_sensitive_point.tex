@@ -1,0 +1,59 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\makeatletter
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\DeclareMathOperator{\maxdev}{maxdev}
+\DeclareMathOperator{\lsp}{lsp}
+
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\R}[1]{\mathcal{#1}} % random variable
+\newcommand{\M}[1]{\mathbf{#1}} % matrix
+\newcommand{\V}[1]{\bm{#1}} % vector
+
+\begin{document}
+Given
+\begin{itemize}
+\item a water distribution network $W = (V,E)$ with
+\begin{itemize}
+\item a set of $N$ nodes (junctions, tanks, reservoirs) $V = \{ v_n | n \in \{ 1, \hdots, N \} \}$
+\item a set of edges (pipes, valves, pumps) connecting the nodes: $E \subseteq V \times V$
+\end{itemize}
+\item a number of timesteps $T \in N$
+\item pressure values for each node $v_n$ given as realizations $\V{x}_n := (x_{n,1}, \hdots, x_{n,T})$ of random variables $\R{X}_n\ \forall n \in \{ 1, \hdots, N \}$ with underlying joint probability density function $p(\R{X})$
+\item A number $S \leq N$ of nodes, which are equipped with sensors. The nodes can be partitioned into $\{ v_1, \hdots, v_S \}$ which are equipped with sensors and $\{ v_{S+1}, \hdots, v_N \}$ which have no sensor. In particular, this means that $\R{X}_{obs} := \{ \R{X}_1, \hdots, \R{X}_S \}$ are observed random variables, while $\R{X}_{lat} := \{ \R{X}_{S+1}, \hdots, \R{X}_N \}$ are latent.
+\item a prediction function $f_{pred} : \mathbb{R}^{S \times K} \mapsto \{ 0, 1 \}$ taking a matrix of pressure values $\M{X}_{obs}^{K+} := ((x_{1,T-K+1}, \hdots, x_{1,T}), \hdots, (x_{S,T-K+1}, \hdots, x_{S,T}))$ for the $K$ most recent timesteps as input and indicating whether the network is under attack (1) or not (0)
+\end{itemize}
+I will define the least sensitive point of the network as the node, for which the pressure values could deviate the most from their expected value while keeping the probability that the prediction function will issue an alarm due to this deviation below a fixed threshold of $\frac{1}{2}$. For this purpose, I will investigate the expected value of the outcome of the prediction function, based on the conditional probability distribution of all other nodes given the deviating node.\\
+Let $v_n$ with corresponding random variable $\R{X}_n$ be the node, for which deviating pressure values shall be examined and let $\V{x}_n^{K+} := (x_{n,T-K+1}, \hdots, x_{n,T})$ be a vector containing the last $K$ realizations of $\R{X}_n$. Let $\R{X}_{-n} := \{ \R{X}_i | i \in \{ 1, \hdots, N \},\ i \neq n\}$ be the random variables of all other nodes and $\M{X}_{-n}^{K+}$ be a matrix containing the last $K$ realizations of $\R{X}_{-n}$. Then the maximum tolerable deviation for a node $v_n$ can be defined as
+\begin{align}
+& \maxdev (v_n) := \max_{\V{x}_n^{K+} \in \mathbb{R}^K} \norm{\V{x}_n^{K+} - E[\R{X}_n]}\\
+& \text{s.t.} \quad E_{p(\R{X}_{-n}|\R{X}_n)}[f_{pred}(\R{X}_{obs})] < \frac{1}{2}
+\end{align}
+where
+\begin{equation}
+E_{P(\R{X}_{-n}|\R{X}_n)}[f_{pred}(\R{X}_{obs})] = \int P(\R{X}_{-n}=\M{X}_{-n}^{K+}|\R{X}_n = \V{x}_n^{K+}) f_{pred}(\M{X}_{obs}^{K+}) \diff \M{X}_{-n}^{K+}
+\end{equation}
+The least sensitive node is now given as the node with highest maximum tolerable deviation
+\begin{align}
+\lsp (V) := \argmax_{v_n \in V} \quad \maxdev (v_n)
+\end{align}
+\end{document}

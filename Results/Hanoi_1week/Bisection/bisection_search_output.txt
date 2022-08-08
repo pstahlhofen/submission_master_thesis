@@ -1,0 +1,701 @@
+===============TIME TRIAL 1===============
+Time parameters of the leak
+Start: 2017-07-06 22:30:00
+End: 2017-07-07 01:30:00
+
+Leak area: 100.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 50.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Leak with size 50.00 cm^2 at node 5 triggered no alarm.
+Placing leak at node 6
+Leak with size 50.00 cm^2 at node 6 triggered no alarm.
+Placing leak at node 7
+Leak with size 50.00 cm^2 at node 7 triggered no alarm.
+Placing leak at node 8
+Leak with size 50.00 cm^2 at node 8 triggered no alarm.
+Placing leak at node 9
+Leak with size 50.00 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 50.00 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Leak with size 50.00 cm^2 at node 18 triggered no alarm.
+Placing leak at node 19
+Leak with size 50.00 cm^2 at node 19 triggered no alarm.
+Placing leak at node 20
+Leak with size 50.00 cm^2 at node 20 triggered no alarm.
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Leak with size 50.00 cm^2 at node 23 triggered no alarm.
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Leak with size 50.00 cm^2 at node 26 triggered no alarm.
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 75.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Leak with size 75.00 cm^2 at node 7 triggered no alarm.
+Placing leak at node 8
+Leak with size 75.00 cm^2 at node 8 triggered no alarm.
+Placing leak at node 9
+Leak with size 75.00 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 75.00 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Leak with size 75.00 cm^2 at node 20 triggered no alarm.
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 87.50 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Leak with size 87.50 cm^2 at node 8 triggered no alarm.
+Placing leak at node 9
+Leak with size 87.50 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 87.50 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 93.75 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Leak with size 93.75 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+The least sensitive point is node 9
+
+Maximize the leak area for junction 9
+Leak area: 93.75 cm^2 -> no alarm
+Leak area: 96.88 cm^2 -> alarm
+Leak area: 95.31 cm^2 -> alarm
+Leak area: 94.53 cm^2 -> no alarm
+Leak area: 94.92 cm^2 -> no alarm
+Leak area: 95.12 cm^2 -> no alarm
+The maximum leak area at the least sensitive point (node 9) and the given time parameters (see above) is 95.12 cm^2.
+
+===============TIME TRIAL 2===============
+Time parameters of the leak
+Start: 2017-07-07 20:30:00
+End: 2017-07-07 23:30:00
+
+Leak area: 100.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 50.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Leak with size 50.00 cm^2 at node 6 triggered no alarm.
+Placing leak at node 7
+Leak with size 50.00 cm^2 at node 7 triggered no alarm.
+Placing leak at node 8
+Leak with size 50.00 cm^2 at node 8 triggered no alarm.
+Placing leak at node 9
+Leak with size 50.00 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 50.00 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Leak with size 50.00 cm^2 at node 18 triggered no alarm.
+Placing leak at node 19
+Leak with size 50.00 cm^2 at node 19 triggered no alarm.
+Placing leak at node 20
+Leak with size 50.00 cm^2 at node 20 triggered no alarm.
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Leak with size 50.00 cm^2 at node 23 triggered no alarm.
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Leak with size 50.00 cm^2 at node 26 triggered no alarm.
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 75.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Leak with size 75.00 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 75.00 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 87.50 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 81.25 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 78.12 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 76.56 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Leak with size 76.56 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+The least sensitive point is node 9
+
+Maximize the leak area for junction 9
+Leak area: 76.56 cm^2 -> no alarm
+Leak area: 77.34 cm^2 -> alarm
+Leak area: 76.95 cm^2 -> alarm
+Leak area: 76.76 cm^2 -> no alarm
+Leak area: 76.86 cm^2 -> alarm
+Leak area: 76.81 cm^2 -> alarm
+The maximum leak area at the least sensitive point (node 9) and the given time parameters (see above) is 76.76 cm^2.
+
+===============TIME TRIAL 3===============
+Time parameters of the leak
+Start: 2017-07-07 03:00:00
+End: 2017-07-07 06:00:00
+
+Leak area: 100.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Leak with size 100.00 cm^2 at node 8 triggered no alarm.
+Placing leak at node 9
+Leak with size 100.00 cm^2 at node 9 triggered no alarm.
+Placing leak at node 10
+Leak with size 100.00 cm^2 at node 10 triggered no alarm.
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Leak with size 100.00 cm^2 at node 20 triggered no alarm.
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 200.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 150.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+Leak area: 125.00 cm^2
+Placing leak at node 4
+Placing leak at node 5
+Placing leak at node 6
+Placing leak at node 7
+Placing leak at node 8
+Placing leak at node 9
+Placing leak at node 10
+Placing leak at node 11
+Placing leak at node 12
+Placing leak at node 13
+Placing leak at node 14
+Placing leak at node 15
+Placing leak at node 16
+Placing leak at node 17
+Placing leak at node 18
+Placing leak at node 19
+Placing leak at node 20
+Leak with size 125.00 cm^2 at node 20 triggered no alarm.
+Placing leak at node 21
+Placing leak at node 22
+Placing leak at node 23
+Placing leak at node 24
+Placing leak at node 25
+Placing leak at node 26
+Placing leak at node 27
+Placing leak at node 28
+Placing leak at node 29
+Placing leak at node 30
+Placing leak at node 31
+Placing leak at node 32
+******************************
+
+The least sensitive point is node 20
+
+Maximize the leak area for junction 20
+Leak area: 125.00 cm^2 -> no alarm
+Leak area: 137.50 cm^2 -> alarm
+Leak area: 131.25 cm^2 -> alarm
+Leak area: 128.12 cm^2 -> alarm
+Leak area: 126.56 cm^2 -> alarm
+Leak area: 125.78 cm^2 -> alarm
+The maximum leak area at the least sensitive point (node 20) and the given time parameters (see above) is 125.00 cm^2.
+
+
+Maximum leak area across the time trials: 125.00 cm^2
+##############################
+
+Trying area: 125.00 cm^2
+Placing leak starting at 2017-07-06 00:00:00
+Placing leak starting at 2017-07-06 00:30:00
+Placing leak starting at 2017-07-06 01:00:00
+Placing leak starting at 2017-07-06 01:30:00
+-- Leak at node 20 triggered no alarm!
+Placing leak starting at 2017-07-06 02:00:00
+Placing leak starting at 2017-07-06 02:30:00
+Placing leak starting at 2017-07-06 03:00:00
+Placing leak starting at 2017-07-06 03:30:00
+Placing leak starting at 2017-07-06 04:00:00
+Placing leak starting at 2017-07-06 04:30:00
+Placing leak starting at 2017-07-06 05:00:00
+Placing leak starting at 2017-07-06 05:30:00
+Placing leak starting at 2017-07-06 06:00:00
+Placing leak starting at 2017-07-06 06:30:00
+Placing leak starting at 2017-07-06 07:00:00
+Placing leak starting at 2017-07-06 07:30:00
+Placing leak starting at 2017-07-06 08:00:00
+Placing leak starting at 2017-07-06 08:30:00
+Placing leak starting at 2017-07-06 09:00:00
+Placing leak starting at 2017-07-06 09:30:00
+Placing leak starting at 2017-07-06 10:00:00
+Placing leak starting at 2017-07-06 10:30:00
+Placing leak starting at 2017-07-06 11:00:00
+Placing leak starting at 2017-07-06 11:30:00
+Placing leak starting at 2017-07-06 12:00:00
+Placing leak starting at 2017-07-06 12:30:00
+Placing leak starting at 2017-07-06 13:00:00
+Placing leak starting at 2017-07-06 13:30:00
+Placing leak starting at 2017-07-06 14:00:00
+Placing leak starting at 2017-07-06 14:30:00
+Placing leak starting at 2017-07-06 15:00:00
+Placing leak starting at 2017-07-06 15:30:00
+Placing leak starting at 2017-07-06 16:00:00
+Placing leak starting at 2017-07-06 16:30:00
+Placing leak starting at 2017-07-06 17:00:00
+Placing leak starting at 2017-07-06 17:30:00
+Placing leak starting at 2017-07-06 18:00:00
+Placing leak starting at 2017-07-06 18:30:00
+Placing leak starting at 2017-07-06 19:00:00
+Placing leak starting at 2017-07-06 19:30:00
+Placing leak starting at 2017-07-06 20:00:00
+Placing leak starting at 2017-07-06 20:30:00
+Placing leak starting at 2017-07-06 21:00:00
+Placing leak starting at 2017-07-06 21:30:00
+Placing leak starting at 2017-07-06 22:00:00
+Placing leak starting at 2017-07-06 22:30:00
+Placing leak starting at 2017-07-06 23:00:00
+Placing leak starting at 2017-07-06 23:30:00
+Placing leak starting at 2017-07-07 00:00:00
+Placing leak starting at 2017-07-07 00:30:00
+Placing leak starting at 2017-07-07 01:00:00
+Placing leak starting at 2017-07-07 01:30:00
+Placing leak starting at 2017-07-07 02:00:00
+Placing leak starting at 2017-07-07 02:30:00
+-- Leak at node 20 triggered no alarm!
+Placing leak starting at 2017-07-07 03:00:00
+-- Leak at node 20 triggered no alarm!
+Placing leak starting at 2017-07-07 03:30:00
+Placing leak starting at 2017-07-07 04:00:00
+Placing leak starting at 2017-07-07 04:30:00
+Placing leak starting at 2017-07-07 05:00:00
+Placing leak starting at 2017-07-07 05:30:00
+Placing leak starting at 2017-07-07 06:00:00
+Placing leak starting at 2017-07-07 06:30:00
+Placing leak starting at 2017-07-07 07:00:00
+Placing leak starting at 2017-07-07 07:30:00
+Placing leak starting at 2017-07-07 08:00:00
+Placing leak starting at 2017-07-07 08:30:00
+Placing leak starting at 2017-07-07 09:00:00
+Placing leak starting at 2017-07-07 09:30:00
+Placing leak starting at 2017-07-07 10:00:00
+Placing leak starting at 2017-07-07 10:30:00
+Placing leak starting at 2017-07-07 11:00:00
+Placing leak starting at 2017-07-07 11:30:00
+Placing leak starting at 2017-07-07 12:00:00
+Placing leak starting at 2017-07-07 12:30:00
+Placing leak starting at 2017-07-07 13:00:00
+Placing leak starting at 2017-07-07 13:30:00
+Placing leak starting at 2017-07-07 14:00:00
+Placing leak starting at 2017-07-07 14:30:00
+Placing leak starting at 2017-07-07 15:00:00
+Placing leak starting at 2017-07-07 15:30:00
+Placing leak starting at 2017-07-07 16:00:00
+Placing leak starting at 2017-07-07 16:30:00
+Placing leak starting at 2017-07-07 17:00:00
+Placing leak starting at 2017-07-07 17:30:00
+Placing leak starting at 2017-07-07 18:00:00
+Placing leak starting at 2017-07-07 18:30:00
+Placing leak starting at 2017-07-07 19:00:00
+Placing leak starting at 2017-07-07 19:30:00
+Placing leak starting at 2017-07-07 20:00:00
+Placing leak starting at 2017-07-07 20:30:00
+Placing leak starting at 2017-07-07 21:00:00
+******************************
+
+The total least sensitive point across all starting times is junction 20.
+
