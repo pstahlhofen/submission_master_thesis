@@ -80,6 +80,25 @@ class AbstractLeakageDetector():
 		return alarm
 
 	def set_overlap_pressures(self, pressures, overlap_steps):
+		'''
+		Store the last pressure values used for training.
+
+		This is useful if one uses previous timesteps and wants to predict
+		some values immediately after the training period. The last few
+		pressure values from the training set can then later be re-used for
+		the prediction of the first few test values.
+
+		Parameters
+		----------
+
+		pressures: pd.DataFrame
+		training pressure values
+
+		overlap_steps: int
+		how many of the last pressure values should be safed
+
+		This sets self.overlap_pressures
+		'''
 		timestep = pressures.index[1] - pressures.index[0]
 		last_measuring_time = pressures.index[-1]
 		overlap_pressures = pressures.tail(overlap_steps)

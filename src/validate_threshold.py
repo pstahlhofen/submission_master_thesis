@@ -62,6 +62,29 @@ class ThresholdValidator():
 		self.scenario_paths = scenario_paths
 
 	def validate(self, threshold, verbose=False):
+		'''
+		Evaluates the quality of a threshold.
+
+		As a basis, this method uses the scenarios in self.scenario_paths. The
+		score for each threshold is determined by the harmonic mean of the
+		time to detection score and the true negative rate:
+		2 * ttd_score * tnr / (ttd_score + tnr)
+
+		Parameters
+		-----------
+
+		threshold: float
+		the threshold to be validated
+
+		verbose: int, default=False
+		If True, the different scores (TTD and TNR) are printed, as well as
+		the resulting score
+
+		Returns
+		---------
+		scores: dict, keys=sceanrio paths, values=scores
+		The resulting scores for each scenario
+		'''
 		self.leakage_detector.threshold = threshold
 		scores = dict()
 		for scenario_path in self.scenario_paths:
@@ -103,6 +126,10 @@ class ThresholdValidator():
 		return scores
 
 	def negative_average_score(self, threshold):
+		'''
+		Computes the negative average of all scores of a threshold (see
+		self.validate). This is useful as input to optimizers.
+		'''
 		scores = self.validate(threshold)
 		average_score = np.array(list(scores.values())).mean()
 		return average_score * (-1)

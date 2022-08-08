@@ -1,26 +1,3 @@
-"""
-This example builds a python representation of the Net1 water distribution
-network using WNTR, implements a simple leakage detection algorithm using
-linear regression and calculates the least sensitive point in the network
-with respect to the detection algorithm for fixed leak duration.
-This is accomplished by iteratively approximating the leakage area
-such that a leak of that area is not detected in *one* node, while it is
-detected in all other nodes of the network. The node in which the leak
-could not be detected is the least sensitive point of the network for fixed
-leak starting time and duration. The leak area is approximated using binary
-search.
-To generalize the least sensitive point over a range of starting times,
-an initial guess for the maximal leak area is obtained by running
-the algorithm described above for different randomly selected starting times.
-After determining the highest undetected leak area for each of the timesteps,
-the maximum of these samples is used for a global search: For a range of
-starting times, each junction is tested again with the derived maximum area.
-Again, if the leak only stays unnoticed for one of the junctions across all
-timesteps, the global least sensitive point is found. If this was not the 
-case, the global search is repeated with a higher area value and continued
-in a binary scheme. Junctions and starting times out of question for the
-least sensitive point are pruned in order to reduce computational complexity.
-"""
 import wntr
 from sklearn.metrics import f1_score
 import pygad

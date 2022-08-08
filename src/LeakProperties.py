@@ -27,6 +27,7 @@ class LeakProperties():
 		self.duration = int(duration)
 
 	def to_dict(self):
+		'''Convert to a dictionary with keys for every attribute.'''
 		dict_representation = dict(
 			area=self.area,
 			junction_name=self.junction_name,
@@ -36,11 +37,13 @@ class LeakProperties():
 		return dict_representation
 
 	def to_json(self, output_file):
+		'''Write the dictionary representation to "output_file" in json format.'''
 		with open(output_file, 'w') as fp:
 			json.dump(self.to_dict(), fp)
 
 	@classmethod
 	def from_json(cls, leakfile):
+		'''Load a LeakProperties object from a json-file.'''
 		with open(leakfile, 'r') as fp:
 			dict_representation = json.load(fp)
 		return cls(**dict_representation)

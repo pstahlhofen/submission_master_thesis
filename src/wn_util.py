@@ -147,6 +147,26 @@ def start_time_range(start, end, leak_duration, timestep):
 	return range(start, end - leak_duration + 1, timestep)
 
 def describe_performance(ga, best_solution, performance_path):
+	'''
+	Save the performance of a Genetic Algorithm to a path.
+
+	Parameters
+	-----------
+	ga: pygad.GA
+	genetic algorithm instance after the algorithm was run
+
+	best_solution: LeakProperties
+	best solution found by the algoritm
+
+	performance_path: str
+	path to which the result should be safed
+
+	The result includes
+	- a json-file containing information about the best solution
+	- a json-file containing parameters of the algorithm
+	- a plot showing the evolution of the best achieved fitness so far
+	  throughout the generations.
+	'''
 	if performance_path[-1]!='/':
 		performance_path+='/'
 	if not os.path.exists(performance_path):
@@ -174,3 +194,4 @@ def describe_performance(ga, best_solution, performance_path):
 	plt.savefig(fitness_evolution_file)
 	best_solution_file = performance_path + 'best_solution.json'
 	best_solution.to_json(best_solution_file)
+
